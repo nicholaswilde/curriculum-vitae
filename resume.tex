@@ -6,8 +6,11 @@
 % referal to HowToTeX.com.
 % Date: July 2011
 %
+% Modified by Nicholas Wilde, 0x08b7d7a3
+% Source: https://github.com/nicholaswilde/curriculum-vitae
+% Date: March 2021
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+\documentclass[paper=letter,fontsize=11pt]{scrartcl} % KOMA-article class
 
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
@@ -41,7 +44,7 @@
 \sectionfont{%                      % Change font of \section command
     \usefont{OT1}{qbk}{b}{n}%       % qbk-b-n: TeX Gyre Bonum Bold
     \sectionrule{0pt}{0pt}{-8pt}{3.5pt}}
-
+    
 %%% Macros
 %%% ------------------------------------------------------------
 \newlength{\spacebox}
@@ -67,7 +70,7 @@
 
 \newcommand{\NewPart}[1]{\section*{\lowercase{#1}}}
 
-\newcommand{\DeobfsAddr}[6]{{#1}{#5}{#4}{#3}{#2}{#6}}
+%\newcommand{\DeobfsAddr}[6]{{#1}{#5}{#4}{#3}{#2}{#6}}
 
 \newcommand{\PersonalEntry}[2]{
         \noindent\hangindent=2em\hangafter=0 % Indentation
@@ -115,90 +118,52 @@
 %       \includegraphics[width=0.15\textwidth]{photo}
 %\end{wrapfigure}
 
-\MyName{isis agora lovecruft}
+\MyName{Nicholas Wilde}
 \MySlogan{r\'esum\'e}
 
 %%% Personal details
 %%% ------------------------------------------------------------
 \NewPart{Personal details}{}
 
-\PersonalEntry{Github}
-  {\href{https://github.com/isislovecruft}{https://github.com/isislovecruft}}
-\PersonalEntry{Twitter}
-  {\href{https://twitter.com/isislovecruft}{@isislovecruft}}
+\PersonalEntry{Profile}
+  {\href{https://nicholaswilde.github.io}{https://nicholaswilde.github.io}}
+\PersonalEntry{LinkedIn}
+  {\href{http://www.linkedin.com/in/nicholaswilde}{http://www.linkedin.com/in/nicholaswilde}}
 \PersonalEntry{Email}
-  {\href{mailto:\DeobfsAddr{isis}{id.}{nthevo}{nsi}{patter}{net}}
-    {\DeobfsAddr{isis}{id.}{nthevo}{nsi}{@patter}{net}}}
-\PersonalEntry{Pronouns}
-  {\href{https://pronoun.is/they/them}{they/them}}
+  {\href{mailto:ncwilde43@gmail.com}{ncwilde43@gmail.com}}
 
 %%% Education
 %%% ------------------------------------------------------------
-%\NewPart{Education}{}
-%
+\NewPart{Education}{}
 
-%\EducationEntry{MSc. Name of Education}{2010-2012}{Name of
-%  University}{Descriptive text goes here. In order to maintain a stylish look,
-%  try to fill this description with a few lines of text. Do the same for the
-%  other entries in the education section.}
-%\sepspace
-%
-%\EducationEntry{BSc. Name of Education}{2007-2010}{Name of
-%  University}{Descriptive text goes here. In order to maintain a stylish look,
-%  try to fill this description with a few lines of text. Do the same for the
-%  other entries in the education section.}
+\EducationEntry{BSc. Mechanical Engineering}{2002 -- 2006}{California Polytechnic State University - San Luis Obispo}{Received a Bachelor of Science from the learn by doing school, Cal Poly SLO, with a general concentration.}
+\sepspace
+
+\EducationEntry{Drivetrain}{2004 -- 2006}{SAE Supermileage - Cal Poly SLO}{Helped revive the club from a 10 year hiatus and achieved first place at the 2007 Shell Eco-marathon Americas.}
 
 %%% Work experience
 %%% ------------------------------------------------------------
-\NewPart{Professional experience hilights}{}
+\NewPart{Professional experience highlights}{}
 
-\hspace{0.6cm} \textit{Please request \href{https://github.com/isislovecruft/curriculum-vitae}{my full
+\hspace{0.6cm} \textit{Please request \href{https://github.com/nicholaswilde/curriculum-vitae}{my full
 curriculum vitae} for more expansive details.}
 
-
-\WorkEntry{Cryptographer}{2018 -- present}
- {Private Funder, Research Grant}{Custom elliptic-curve cryptographic
- signature research, design, development, and optimisation.}
+\WorkEntry{Director, Automation Design}{2017 -- present}
+ {Applied Medical - Rancho Santa Margarita, CA}{Leading a team of 26 mechanical engineers to design and troubleshoot automated equipment.}
 \sepspace
 
-\WorkEntry{Applied Cryptographer}{2018}
- {Signal Foundation, Contractor}{Custom zero-knowledge proof design
- and multi-architecture cryptographic development targeting numerous
- mobile devices and a web assembly API for a browser extension.}
+\WorkEntry{Manager, Automation Design}{2011 -- 2017}
+ {Applied Medical - Rancho Santa Margarita, CA}{Lead a team of 6 mechanical engineers to design and troubleshoot automated equipment.}
 \sepspace
 
-\WorkEntry{Senior Software Developer \& Security Engineer}{2010 -- 2018}
-  {The Tor Project, Staff}{Reverse engineering, software design, and development for the
-  Open Observatory of Network Interference (OONI), a platform for building
-  distributed, global censorship detection and measurement systems, partnered
-  with MLabs and PlanetLab. Lead developer and maintainer of systems and components for Tor
-  bridge distribution. Development in C and Rust on
-  the core Tor network daemon, including cryptographic, asychronous
-  network protocol, and parser components, as well as
-  security-focused audits and code review, and bug fixes.}
+\WorkEntry{Design Engineer}{2010 -- 2011}
+ {Applied Medical - Rancho Santa Margarita, CA}{Designed and troubleshot automated equipment.}
 \sepspace
 
-\WorkEntry{Software Developer and Security Consultant}{2011 -- 2012}{LEAP
-  Encryption Access Project, Part-time}{Development of several asynchronous
-  servers, including a transparently encrypting remailer, conduction of
-  security audits for components and dependencies, and consulting with respect
-  to systems architecture and cryptographic engineering.}
+\WorkEntry{Technical Officer}{2009 -- 2010}{CRANN - Dublin, Ireland}{Worked with Principal Investigators to help support laboratories by maintaining equipment and managing inventory.}
 \sepspace
 
-\WorkEntry{Cryptographer \& Security Consultant}{2007 -- present}
- {Patterns In The Void, Contractor/Consultant}{Security auditing and cryptographic
- design consulting to various OSS projects, including cryptographic
- libraries used by the Bitcoin community. Research on elliptic curve cryptography, zero-knowledge protocol
-  design, and anonymous credentials.  Co-authored what is currently the
-  fastest cryptographic library,
-  \href{https://github.com/dalek-cryptography}{\textsc{curve25519-dalek}}.}
-\sepspace
-
-\WorkEntry{Various Contributions}{2006 -- present}{Volunteer}{Volunteer
-  contributions to numerous Open Source Software (OSS) projects,
-  including Open Whispersystems, March-Hare Communications Collective, LEAP
-  Encryption Access Project, Briar Project, Tahoe-LAFS, The Tor Project, the
-  Electronic Frontier Foundation, and others.}
+\WorkEntry{Mechanical Engineer, MTS-I}{2007 -- 2008}{Panasonic Avionics Corp. - Lake Forest, CA}{Designed sheet metal enclosures for in-flight entertainment systems that had to meet FAA vibratory and thermal regulations.}
 
 %%% Skills
 %%% ------------------------------------------------------------
