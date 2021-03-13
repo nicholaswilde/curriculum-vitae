@@ -10,8 +10,17 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - uses: xu-cheng/texlive-action/full@v1
+      - name: texlive-action
+        uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
             apk add make
             make
+      - name: Create Release With Asset
+        id: Release-AIO
+        uses: Hs1r1us/Release-AIO@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          asset_files: './resume.pdf'
