@@ -19,9 +19,7 @@ jobs:
       - name: Check pdf files
         run: |
           file resume.pdf | grep -q ' PDF '
-      - name: Upload release binaries
-        uses: alexellis/upload-assets@0.2.2
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: AButler/upload-release-assets@v2.0
         with:
-          asset_paths: '["resume.pdf"]'
+          files: 'resume.pdf'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
