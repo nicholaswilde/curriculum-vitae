@@ -9,17 +9,35 @@ jobs:
   build_latex:
     runs-on: ubuntu-20.04
     steps:
+      - 
+        name: Set current date as env variable
+        run: echo "now::$(date +'%Y-%m-%dT%H%M')" >> $GITHUB_ENV
       - uses: actions/checkout@v2
-      - name: texlive-action
+      - 
+        name: texlive-action
         uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
             apk add make
             make
-      - name: Check pdf files
+      - 
+        name: Check pdf files
         run: |
           file resume.pdf | grep -q ' PDF '
-      - uses: AButler/upload-release-assets@v2.0
+      -
+        name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ env.now }}
+          release_name: ${{ env.now }}
+          draft: false
+          prerelease: false
+      - 
+        uses: AButler/upload-release-assets@v2.0
         with:
           files: 'resume.pdf'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          release-tag: ${{ env.now }}
