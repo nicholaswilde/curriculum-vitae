@@ -42,52 +42,52 @@
 %   \sectionrule{0pt}{0pt}{-5pt}{3.5pt}}
 
 \sectionfont{%                      % Change font of \section command
-    \usefont{OT1}{qbk}{b}{n}%       % qbk-b-n: TeX Gyre Bonum Bold
+    \usefont{OT1}{qbk}{bx}{n}%       % qbk-b-n: TeX Gyre Bonum Bold
     \sectionrule{0pt}{0pt}{-8pt}{3.5pt}}
     
 %%% Macros
 %%% ------------------------------------------------------------
-\newlength{\spacebox}
-\settowidth{\spacebox}{8888888888}          % Box to align text
-\newcommand{\sepspace}{\vspace*{1em}}       % Vertical space macro
+\newlength\spacebox
+\settowidth\spacebox{8888888888}          % Box to align text
+\newcommand\sepspace{\vspace*{1em}}       % Vertical space macro
 
 \definecolor{dark-grey}{gray}{0.15}
 
 % TeX Gyre Bonum bold
-\newcommand{\BonumBold}[1]{\usefont{OT1}{qbk}{b}{n} #1}
+\newcommand\BonumBold[1]{\usefont{OT1}{qbk}{bx}{n} #1}
 % TeX Gyre Bonum
-\newcommand{\Bonum}[1]{\usefont{OT1}{qbk}{n}{n} #1}
+\newcommand\Bonum[1]{\usefont{OT1}{qbk}{m}{n} #1}
 % TeX Gyre Termes
-\newcommand{\Termes}[1]{\usefont{OT1}{qtm}{m}{n} #1}
+\newcommand\Termes[1]{\usefont{OT1}{qtm}{m}{n} #1}
 
-\newcommand{\MyName}[1]{ % Name
+\newcommand\MyName[1]{ % Name
         \Huge \BonumBold{\hfill #1}
         \par \normalsize \normalfont}
 
-\newcommand{\MySlogan}[1]{ % Slogan (optional)
+\newcommand\MySlogan[1]{ % Slogan (optional)
         \large \Termes{\hfill \textit{#1}}
         \par \normalsize \normalfont}
 
-\newcommand{\NewPart}[1]{\section*{\lowercase{#1}}}
+\newcommand\NewPart[1]{\section*{\lowercase{#1}}}
 
 %\newcommand{\DeobfsAddr}[6]{{#1}{#5}{#4}{#3}{#2}{#6}}
 
-\newcommand{\PersonalEntry}[2]{
+\newcommand\PersonalEntry[2]{
         \noindent\hangindent=2em\hangafter=0 % Indentation
-        \parbox{\spacebox}{        % Box to align text
+        \parbox\spacebox{        % Box to align text
         \textit{#1}}               % Entry name (address, email, etc.)
         \hspace{2em}{\color{dark-grey}\footnotesize #2 }\par} % Entry value
 
-\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+\newcommand\SkillsEntry[2]{      % Same as \PersonalEntry
         \noindent\hangindent=2em\hangafter=0 % Indentation
-        \parbox{\spacebox}{        % Box to align text
+        \parbox\spacebox{        % Box to align text
         \textit{#1}}               % Entry name
         \parbox[t][2.5em]{12.5cm}{%
           \noindent\hangindent=30px\hangafter=0{%
           \footnotesize #2}}%      %Entry value
         \normalsize \par}
 
-\newcommand{\EducationEntry}[4]{
+\newcommand\EducationEntry[4]{
         \noindent \textbf{#1} \hfill        % Study
         \colorbox{Black}{%
           \makebox(100,10){%
@@ -98,7 +98,7 @@
           \Bonum{\footnotesize #4}}%        % Description
         \normalsize \par}
 
-\newcommand{\WorkEntry}[4]{                 % Same as \EducationEntry
+\newcommand\WorkEntry[4]{                 % Same as \EducationEntry
         \noindent \textbf{#1} \hfill        % Jobname
         \colorbox{Black}{%
           \makebox(100,10){%
@@ -132,15 +132,6 @@
 \PersonalEntry{Email}
   {\href{mailto:ncwilde43@gmail.com}{ncwilde43@gmail.com}}
 
-%%% Education
-%%% ------------------------------------------------------------
-\NewPart{Education}{}
-
-\EducationEntry{BSc. Mechanical Engineering}{2002 -- 2006}{California Polytechnic State University - San Luis Obispo}{Received a Bachelor of Science from the learn by doing school, Cal Poly SLO, with a general concentration.}
-\sepspace
-
-\EducationEntry{Drivetrain}{2004 -- 2006}{SAE Supermileage - Cal Poly SLO}{Helped revive the club from a 10 year hiatus and achieved first place at the 2007 Shell Eco-marathon Americas.}
-
 %%% Work experience
 %%% ------------------------------------------------------------
 \NewPart{Professional experience highlights}{}
@@ -149,7 +140,7 @@
 curriculum vitae} for more expansive details.}
 
 \WorkEntry{Director, Automation Design}{2017 -- present}
- {Applied Medical - Rancho Santa Margarita, CA}{Leading a team of 26 mechanical engineers to design and troubleshoot automated equipment.}
+ {Applied Medical - Rancho Santa Margarita, CA}{Leading a team of 26 mechanical engineers to design and troubleshoot automated equipment that range from laser cutters to inspection machines to assembly machines.}
 \sepspace
 
 \WorkEntry{Manager, Automation Design}{2011 -- 2017}
@@ -164,6 +155,15 @@ curriculum vitae} for more expansive details.}
 \sepspace
 
 \WorkEntry{Mechanical Engineer, MTS-I}{2007 -- 2008}{Panasonic Avionics Corp. - Lake Forest, CA}{Designed sheet metal enclosures for in-flight entertainment systems that had to meet FAA vibratory and thermal regulations.}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry{BSc. Mechanical Engineering}{2002 -- 2006}{California Polytechnic State University - San Luis Obispo}{Received a Bachelor of Science from the learn by doing school, Cal Poly SLO, with a general concentration.}
+\sepspace
+
+\EducationEntry{Drivetrain Team}{2004 -- 2006}{SAE Supermileage - Cal Poly SLO}{Helped revive the club from a 10 year hiatus and achieved first place at the 2007 Shell Eco-marathon Americas.}
 
 %%% Skills
 %%% ------------------------------------------------------------
@@ -188,6 +188,6 @@ curriculum vitae} for more expansive details.}
 
 %%% References
 %%% ------------------------------------------------------------
-\NewPart{References}{}
-\hspace{0.6cm} \textit{Available upon request}
+%\NewPart{References}{}
+%\hspace{0.6cm} \textit{Available upon request}
 \end{document}

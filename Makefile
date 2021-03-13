@@ -1,13 +1,16 @@
 .PHONY: all
 
-all: resume curriculum-vitae
+all: resume
 
 clean:
 	-rm *.out
 	-rm *.log
 	-rm *.aux
-	-rm resume.pdf
-	-rm curriculum-vitae.pdf
+	-rm *.pdf
+
+lint:
+	lacheck resume.tex; \
+	#lacheck curriculum-vitae.tex
 
 resume:
 	pdflatex resume.tex
