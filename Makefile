@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: resume
+all: resume cv
 
 clean:
 	-rm *.out
@@ -15,5 +15,5 @@ lint:
 resume:
 	pdflatex resume.tex
 
-curriculum-vitae:
-	pdflatex curriculum-vitae.tex
+cv:
+	pdflatex cv.tex
