@@ -16,11 +16,9 @@ jobs:
           run: |
             apk add make
             make
-      - name: Create Release With Asset
-        id: Release-AIO
-        uses: Hs1r1us/Release-AIO@v1.0
+      - name: Upload release binaries
+        uses: alexellis/upload-assets@0.2.2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
-          tag_name: ${{ github.ref }}
-          asset_files: './resume.pdf'
+          asset_paths: '["./resume.pdf"]'
