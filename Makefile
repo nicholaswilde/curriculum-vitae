@@ -10,7 +10,8 @@ clean:
 
 lint:
 	lacheck resume.tex; \
-	#lacheck curriculum-vitae.tex
+	lacheck cv.tex; \
+	yamllint .
 
 resume:
 	pdflatex resume.tex
