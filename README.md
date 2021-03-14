@@ -7,6 +7,8 @@ My curriculum vitae and resume.
 ## Requirements
 
 * [pdflatex](https://www.latex-project.org/get/)
+or
+* [Docker](https://www.docker.com/)
 
 ## Usage
 
@@ -16,6 +18,15 @@ My curriculum vitae and resume.
 4. Push the updated `*.tex` files to the repo.
 5. The [ci github action](https://github.com/nicholaswilde/curriculum-vitae/actions/workflows/ci.yaml) will build and create a release from which the PDFs can downloaded.
 
+Docker may also be used to build the PDFs instead of install `pdflatex`.
+
+```shell
+$ make docker
+# or
+$ make docker-resume
+$ make docker-cv
+```
+
 ## Download the Latest PDFs
 
 * https://github.com/nicholaswilde/curriculum-vitae/releases/latest/download/resume.pdf
@@ -23,7 +34,7 @@ My curriculum vitae and resume.
 
 ## Pre-commit hook
 
-If you want to automatically generate `README.md` files with a pre-commit hook, make sure you
+If you want to automatically lint `yaml` files with a pre-commit hook, make sure you
 [install the pre-commit binary](https://pre-commit.com/#install), and add a [.pre-commit-config.yaml file](./.pre-commit-config.yaml)
 to your project. Then run:
 
