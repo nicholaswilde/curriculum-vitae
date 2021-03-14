@@ -2,6 +2,8 @@
 
 [![ci](https://github.com/nicholaswilde/curriculum-vitae/actions/workflows/ci.yaml/badge.svg)](https://github.com/nicholaswilde/curriculum-vitae/actions/workflows/ci.yaml)
 
+My curriculum and resume.
+
 ## Edit at Overleaf
 
 https://www.overleaf.com/read/nkdbqrgysqft
