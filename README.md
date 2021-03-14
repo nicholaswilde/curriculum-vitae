@@ -6,7 +6,7 @@ My curriculum vitae and resume.
 
 ## Requirements
 
-* [pdflatex](https://www.latex-project.org/get/)
+* [pdflatex](https://tex.stackexchange.com/q/1092)
 or
 * [Docker](https://www.docker.com/)
 
