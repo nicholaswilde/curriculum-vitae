@@ -32,7 +32,7 @@ $ make docker-cv
 * https://github.com/nicholaswilde/curriculum-vitae/releases/latest/download/resume.pdf
 * https://github.com/nicholaswilde/curriculum-vitae/releases/latest/download/cv.pdf
 
-## Pre-commit hook
+## 🪝&nbsp; Pre-commit hook
 
 If you want to automatically lint `yaml` files with a pre-commit hook, make sure you
 [install the pre-commit binary](https://pre-commit.com/#install), and add a [.pre-commit-config.yaml file](./.pre-commit-config.yaml)
