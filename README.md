@@ -27,7 +27,7 @@ $ make docker-resume
 $ make docker-cv
 ```
 
-## Download the Latest PDFs
+## :floppy_disk:&nbsp; Download the Latest PDFs
 
 * https://github.com/nicholaswilde/curriculum-vitae/releases/latest/download/resume.pdf
 * https://github.com/nicholaswilde/curriculum-vitae/releases/latest/download/cv.pdf
