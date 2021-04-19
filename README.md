@@ -43,6 +43,13 @@ $ pre-commit install
 $ pre-commit install-hooks
 ```
 
-## License
+## :balance_scale:&nbsp; License
 
 [MIT License](./LICENSE)
+
+## :pencil:&nbsp; Author
+
+This project was started in 2021 by [Nicholas Wilde].
+
+[awesome-home-kubernetes]: https://github.com/k8s-at-home/awesome-home-kubernetes
+[Nicholas Wilde]: https://github.com/nicholaswilde/
