@@ -1,6 +1,6 @@
 # Curriculum Vitae
 
-[![ci](https://github.com/nicholaswilde/curriculum-vitae/actions/workflows/ci.yaml/badge.svg)](https://github.com/nicholaswilde/curriculum-vitae/actions/workflows/ci.yaml)
+[![ci](https://img.shields.io/github/workflow/status/nicholaswilde/curriculum-vitae/ci?label=ci&logo=github&style=for-the-badge)](https://github.com/nicholaswilde/curriculum-vitae/actions/workflows/ci.yaml)
 
 My curriculum vitae and resume.
 
@@ -10,7 +10,7 @@ My curriculum vitae and resume.
 or
 * [Docker](https://www.docker.com/)
 
-## Usage
+## :gear:&nbsp; Usage
 
 1. Edit the `*.tex` files over at [Overleaf](https://www.overleaf.com/read/nkdbqrgysqft)
 2. Copy the `*.tex` contents to the repo.
