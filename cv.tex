@@ -8,7 +8,7 @@
 %
 % Modified by Nicholas Wilde, 0x08b7d7a3
 % Source: https://github.com/nicholaswilde/curriculum-vitae
-% Date: March 2021
+% Date: May 2022
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[paper=letter,fontsize=11pt]{scrartcl} % KOMA-article class
 
@@ -132,6 +132,8 @@
           \color{dark-grey}%
           \Bonum{\footnotesize #4}}%        % Description
         \normalsize \par}
+% Remove 
+\usepackage[hidelinks]{hyperref}
 
 %%% Begin Document
 %%% ------------------------------------------------------------
@@ -159,9 +161,6 @@
 %%% Work experience
 %%% ------------------------------------------------------------
 \NewPart{Professional experience}{}
-
-\hspace{0.6cm} \textit{Please request \href{https://github.com/nicholaswilde/curriculum-vitae}{my full
-curriculum vitae} for more expansive details.}
 
 \WorkEntry{Director, Automation Design}{2017 -- present}
  {Applied Medical - Rancho Santa Margarita, CA}{Leading a team of 26 mechanical engineers to design and troubleshoot automated equipment that range from laser cutters to inspection machines to assembly machines. Reviewing machine designs. Managing and prioritizing department projects. Hiring new team members. Coaching team leaders. Managing and established workflow for SOLIDWORKS PDM. Creating and improving department processes. Deployed and managing department SharePoint site. Creating and managing department document templates.}
@@ -192,13 +191,22 @@ curriculum vitae} for more expansive details.}
 %%% ------------------------------------------------------------
 \NewPart{Hobbies}{}
 
-\WorkEntry{Turing Pi Cluster}{2020 -- Present}{}{Managing a Turing Pi cluster using 7 RPi CM3+ running \textsc{k3s} on .}
+\WorkEntry{\href{https://github.com/nicholaswilde/cook-docs}{cook-docs}}{2022 -- Present}{go}{A tool for automatically generating markdown documentation for \textsc{cooklang} recipes.}
 \sepspace
 
-\WorkEntry{Helm Charts}{2020 -- Present}{}{}
+\WorkEntry{\href{https://github.com/nicholaswilde/recipes}{Recipes}}{2022 -- Present}{yaml cooklang}{A collection of recipes made with \textsc{cooklang}.}
 \sepspace
 
-\WorkEntry{Docker Images}{2020 -- Present}{}{}
+\WorkEntry{\href{https://github.com/nicholaswilde/solar-battery-charger}{Solar Battery Charger}}{2022 -- Present}{arduino}{A solar battery charger to charge lithium ion (li-ion) 18650, 9V, and coin batteries and Ni-MH AA and AAA batteries.}
+\sepspace
+
+\WorkEntry{Turing Pi Cluster}{2020 -- 2022}{helm kubernetes flux yaml}{Managing a Turing Pi cluster using 7 RPi CM3+ running \textsc{k3s}.}
+\sepspace
+
+\WorkEntry{Helm Charts}{2020 -- 2022}{helm kubernetes yaml}{A collection of helm charts that run on \textsc{Kubernetes}.}
+\sepspace
+
+\WorkEntry{Docker Images}{2020 -- 2022}{docker}{A collection of Docker images built for multiple architectures.}
 \sepspace
 
 \WorkEntry{Traditional Woodworking}{2019 -- Present}{}{Using traditional woodworking hand tools such as planes, handsaw, hammers, and chisels to create Shaker style furniture. Projects include a cherry side table, a cutting board, and English style workbench.}
@@ -220,56 +228,16 @@ curriculum vitae} for more expansive details.}
 \NewPart{Skills}{}
 
 %% In order of how willing I am to write them:
-\SkillsEntry{Languages}{\textsc{Some Python}, \textsc{VBA}, \textsc{Bash}, \textsc{make}}
+\SkillsEntry{Languages}{\textsc{Some Python}, \textsc{VBA}, \textsc{Bash}, \textsc{make}, \textsc{go}}
 
 %% In no particular order and clearly incomplete because it says nothing about
 %% bicycle mechanics, asciiart, or bytebytes:
-\SkillsEntry{Software}{SOLIDWORKS 2017, SOLIDWORKS PDM, Microsoft Excel,
-Microsoft SharePoint, GNU/Linux, Helm, Docker, Kubernetes, GitHub}
+\SkillsEntry{Software}{SOLIDWORKS 2021, SOLIDWORKS PDM, Microsoft Excel,
+Microsoft SharePoint, GNU/Linux, Helm, Docker, Kubernetes, GitHub, git}
 \sepspace
 
 \SkillsEntry{Hardware}{Raspberry Pi, Arduino, Turing Pi}
 
 \SkillsEntry{OSes}{Debian, Ubuntu, Raspberry Pi OS, Hypriot OS, Windows 7, Windows 10, Chrome OS}
 
-%\noindent\hangindent=2em\hangafter=0
-%\parbox{\spacebox}{
-%  \textit{Bytebeats}}
-%\parbox[t][2.5em]{12.5cm}{
-%  \noindent\hangindent=30px\hangafter=0
-%    \small
-%\begin{verbatim}
-%
-%python3 -c'print(foo)'
-%
-%\end{verbatim}
-%\normalsize\par}
-
-%x='if(t%2)else';python3 -c'[print(t>>15&(t>>(2$x 4))%(3+(t>>(8$x 11))%4)+\
-%(t>>10)|42&t>>7&t<<9,end='')for t in range(2**20)]'|aplay -c2 -r4
-%
-
-%\SkillsEntry{Bytebeats}{
-%  \begin{minipage}{\textwidth}
-    
-%\end{minipage}}
-
-%%
-%% x=''if(t%2)else'';python3 -c''[print(t>>15&(t>>(2$x 4))%(3+(t>>(8$x 11))%4)\
-%%   
-%%
-%%                   ↑↑ CLEARLY MY GREATEST SKILL ↑↑
-
-%%% References
-%%% ------------------------------------------------------------
-%\NewPart{References}{}
-%\hspace{0.6cm} \textit{Available upon request}
-
-%XXX: You could do name-dropping here, but I'm not sure whether that's helpful
-%     or required.  For example, listing Ian, who would probably be willing to
-%     write you a letter that he himself wanted to have you as a student
-%     looks quite impressive... not sure whether it's helpful or necessary,
-%     though.
-
 \end{document}
-
