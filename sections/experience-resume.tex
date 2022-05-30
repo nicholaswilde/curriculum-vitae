@@ -1,0 +1,53 @@
+%% Same as \EducationEntry
+\newcommand\WorkEntry[4]{
+  \noindent \textbf{#1} \hfill        % Jobname
+  \colorbox{Black}{%
+    \makebox(100,10){%
+      \color{White}\textbf{#2}}} \par % Duration
+  \noindent \textit{#3} \par          % Company
+  \noindent\hangindent=2em\hangafter=0{%
+    \color{dark-grey}%
+    \Bonum{\footnotesize #4}}%        % Description
+  \normalsize \par
+}
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Professional experience highlights}{}
+
+\hspace{0.6cm} \textit
+  {Please request \href{https://github.com/nicholaswilde/curriculum-vitae/releases/latest/download/cv.pdf}{my full curriculum vitae} for more expansive details.}
+
+\WorkEntry
+  {Director, Automation Design}
+  {2017 -- present}
+  {Applied Medical - Rancho Santa Margarita, CA}
+  {Leading a team of 26 mechanical engineers to design and troubleshoot automated equipment that range from laser%
+  \ cutters to inspection machines to assembly machines.}
+\sepspace
+
+\WorkEntry
+  {Manager, Automation Design}
+  {2011 -- 2017}
+  {Applied Medical - Rancho Santa Margarita, CA}
+  {Lead a team of six mechanical engineers to design and troubleshoot automated equipment.}
+\sepspace
+
+\WorkEntry
+  {Design Engineer}
+  {2010 -- 2011}
+  {Applied Medical - Rancho Santa Margarita, CA}
+  {Designed and troubleshot automated equipment that ranged from laser cutters to inspection machines.}
+\sepspace
+
+\WorkEntry
+  {Technical Officer}
+  {2009 -- 2010}
+  {CRANN - Dublin, Ireland}
+  {Worked with Principal Investigators to help support laboratories by maintaining equipment and managing inventory.}
+\sepspace
+
+\WorkEntry
+  {Mechanical Engineer, MTS-I}
+  {2007 -- 2008}
+  {Panasonic Avionics Corp. - Lake Forest, CA}
+  {Designed and tested sheet metal enclosures for in-flight entertainment systems that had to meet FAA vibratory and thermal regulations.}

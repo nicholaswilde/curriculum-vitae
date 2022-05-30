@@ -1,0 +1,53 @@
+---
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:
+    desc: Build all using the local pdflatex
+    cmds:
+      - task: cv
+      - task: resume
+  clean:
+    desc: Remove the out, log, aux, and pdf files
+    cmds:
+      - rm -f *.out
+      - rm -f *.log
+      - rm -f *.aux
+      - rm -f *.pdf
+  cv:
+    desc: Build cv.pdf using the local pdflatex
+    cmds:
+      - pdflatex cv.tex
+  deps:
+    desc: Install some dependencies
+    cmds:
+      - sudo apt install lacheck texlive-latex-extra
+  docker:
+    desc: Build resume.pdf and cv.pdf using the texlive Docker image
+    cmds:
+      - task: docker-cv
+      - task: docker-resume
+  docker-cv:
+    desc: Build cv.pdf using the texlive Docker image
+    cmds:
+      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(shell id -u):$(shell id -g) texlive/texlive pdflatex cv.tex
+  docker-resume:
+    desc: Build resume.pdf using the texlive Docker image
+    cmds:
+      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(shell id -u):$(shell id -g) texlive/texlive pdflatex resume.tex
+  lint:
+    desc: Lint yaml and tex files
+    cmds:
+      - lacheck resume.tex
+      - lacheck cv.tex
+      - yamllint .
+  resume:
+    desc: Build resume.pdf using the local pdflatex
+    cmds:
+      - pdflatex resume.tex
+  default:
+    cmds:
+      - task -l
+    silent: true

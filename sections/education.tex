@@ -1,0 +1,21 @@
+\newcommand\EducationEntry[4]{
+  \noindent \textbf{#1} \hfill        % Study
+  \colorbox{Black}{%
+    \makebox(100,10){%
+      \color{White}\textbf{#2}}} \par % Duration
+  \noindent \textit{#3} \par          % School
+  \noindent\hangindent=2em\hangafter=0 {%
+    \color{dark-grey}%
+    \Bonum{\footnotesize #4}}%        % Description
+  \normalsize \par
+}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry
+  {BSc. Mechanical Engineering}
+  {2002 -- 2006}
+  {California Polytechnic State University - San Luis Obispo}
+  {Received a Bachelor of Science from the learn by doing school, Cal Poly SLO, with a general concentration.}

@@ -1,6 +1,7 @@
 ---
 name: ci
-'on':
+on:  # yamllint disable-line rule:truthy
+  dispatch:
   push:
     paths:
       - '**.tex'
@@ -9,23 +10,26 @@ jobs:
   build_latex:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      -
-        name: Set current date as env variable
+      - name: Checkout main
+        uses: actions/checkout@v3
+
+      - name: Set current date as env variable
         run: echo "now=$(date +'%Y-%m-%dT%H%M')" >> $GITHUB_ENV
-      -
-        name: texlive-action
+
+      - name: texlive-action
         uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
-            apk add make
-            make
-      -
-        name: Check pdf files
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+            brew install go-task/tap/go-task
+            task build
+
+      - name: Check pdf files
         run: |
           file resume.pdf | grep -q ' PDF '
-      -
-        name: Create Release
+          file cv.pdf | grep -q ' PDF '
+
+      - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -35,7 +39,8 @@ jobs:
           release_name: ${{ env.now }}
           draft: false
           prerelease: false
-      -
+
+      - name: Upload Release
         uses: AButler/upload-release-assets@v2.0
         with:
           files: 'resume.pdf;cv.pdf'

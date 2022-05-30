@@ -1,0 +1,17 @@
+\newcommand\PersonalEntry[2]{
+  \noindent\hangindent=2em\hangafter=0                  % Indentation
+  \parbox\spacebox{                                     % Box to align text
+  \textit{#1}}                                          % Entry name (address, email, etc.)
+  \hspace{2em}{\color{dark-grey}\footnotesize #2 }\par  % Entry value
+}
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Profile}
+  {\href{https://nicholaswilde.io}{https://nicholaswilde.io}}
+\PersonalEntry{LinkedIn}
+  {\href{http://www.linkedin.com/in/nicholaswilde}{http://www.linkedin.com/in/nicholaswilde}}
+\PersonalEntry{Email}
+  {\href{mailto:ncwilde43@gmail.com}{ncwilde43@gmail.com}}

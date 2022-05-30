@@ -1,0 +1,23 @@
+%% Same as \PersonalEntry
+\newcommand\SkillsEntry[2]{
+  \noindent\hangindent=2em\hangafter=0  % Indentation
+  \parbox\spacebox{                     % Box to align text
+  \textit{#1}}                          % Entry name
+  \parbox[t][2.5em]{12.5cm}{%
+    \noindent\hangindent=30px\hangafter=0{%
+    \footnotesize #2}}%                 % Entry value
+  \normalsize \par
+}
+
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+
+%% In order of how willing I am to write them:
+\SkillsEntry
+  {DevOps}
+  {Git, Kubernetes, Docker, Ansible, GitHub Actions}
+
+\SkillsEntry
+  {CAD}
+  {SOLIDWORKS 2021, SOLIDWORKS PDM, Pro/Engineer 2001}
