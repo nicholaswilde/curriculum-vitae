@@ -20,8 +20,7 @@ jobs:
         uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
-            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-            brew install go-task/tap/go-task
+            apk add go-task
             task build
 
       - name: Check pdf files
