@@ -1,7 +1,7 @@
 ---
 name: ci
 on:  # yamllint disable-line rule:truthy
-  dispatch:
+  workflow_dispatch:
   push:
     paths:
       - '**.tex'
