@@ -29,6 +29,6 @@ jobs:
           yamllint_config_filepath: ./.yamllint
       - name: 'lacheck'
         run: |
-          apt install lacheck
+          sudo apt install -y lacheck
           lacheck resume.tex
           lacheck cv.tex
