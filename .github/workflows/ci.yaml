@@ -17,7 +17,7 @@ jobs:
         run: echo "now=$(date +'%Y-%m-%dT%H%M')" >> $GITHUB_ENV
 
       - name: texlive-action
-        uses: xu-cheng/texlive-action/full@v1
+        uses: xu-cheng/texlive-action/full@v2
         with:
           run: |
             apk add go-task
