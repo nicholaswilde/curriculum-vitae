@@ -40,7 +40,7 @@ jobs:
           prerelease: false
 
       - name: Upload Release
-        uses: AButler/upload-release-assets@v2.0
+        uses: AButler/upload-release-assets@v3.0
         with:
           files: 'resume.pdf;cv.pdf'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
