@@ -1,0 +1,4 @@
+Task: Update status badge URLs in README.md
+Summary of changes: Replaced the deprecated github/workflow/status endpoint with github/actions/workflow/status specifying exact workflow file names (ci.yaml, lint.yaml).
+Modified files: README.md
+Why: Fixes broken badges in the repository documentation.
