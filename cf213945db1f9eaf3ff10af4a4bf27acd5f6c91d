@@ -1,0 +1,4 @@
+Task: Validate document compilation workflow
+Summary of changes: Ran Docker compilation targets ('task docker-cv' and 'task docker-resume') and confirmed that cv.pdf and resume.pdf compile cleanly without LaTeX errors.
+Modified files: None (PDFs are git-ignored)
+Why: Verified document building pipeline behaves identically to CI production environment.
