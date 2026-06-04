@@ -1,0 +1,7 @@
+Phase: Phase 1: Local and Container Compilation Validation
+Automated Test Command: task lint && task docker
+Manual Verification Steps:
+1. Check for compilation output: Run ls -l *.pdf and confirm that cv.pdf and resume.pdf have been created/updated with the current timestamp.
+2. Confirm layout format: Open and inspect the generated PDFs.
+3. Run lint check manually: Execute task lint to verify yamllint and lacheck report zero styling issues.
+User Confirmation: Yes, this meets my expectations.
