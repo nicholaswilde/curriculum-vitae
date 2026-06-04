@@ -8,10 +8,10 @@ on:  # yamllint disable-line rule:truthy
 
 jobs:
   build_latex:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout main
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set current date as env variable
         run: echo "now=$(date +'%Y-%m-%dT%H%M')" >> $GITHUB_ENV
@@ -30,18 +30,14 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ env.now }}
-          release_name: ${{ env.now }}
+          name: ${{ env.now }}
           draft: false
           prerelease: false
-
-      - name: Upload Release
-        uses: AButler/upload-release-assets@v2.0
-        with:
-          files: 'resume.pdf;cv.pdf'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          release-tag: ${{ env.now }}
+          files: |
+            resume.pdf
+            cv.pdf

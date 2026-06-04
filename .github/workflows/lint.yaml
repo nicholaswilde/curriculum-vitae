@@ -19,16 +19,21 @@ on:  # yamllint disable-line rule:truthy
 
 jobs:
   lint:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: 'Cache cargo'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo
+          key: ${{ runner.os }}-cargo-yamllint-rs
       - name: 'yamllint-rs'
         run: |
           cargo install yamllint-rs
           yamllint-rs -c .yamllint .
       - name: 'lacheck'
         run: |
-          sudo apt install -y lacheck
+          sudo apt-get install -y lacheck
           lacheck resume.tex
           lacheck cv.tex
