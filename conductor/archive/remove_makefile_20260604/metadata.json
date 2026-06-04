@@ -1,0 +1,8 @@
+{
+  "track_id": "remove_makefile_20260604",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-04T07:08:00Z",
+  "updated_at": "2026-06-04T07:08:00Z",
+  "description": "Remove Makefile and clean up references to GNU Make in documentation"
+}
