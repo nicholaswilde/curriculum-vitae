@@ -10,7 +10,7 @@ To provide a clean, modern, and easily maintainable curriculum vitae and resume 
 1. **Multi-Format Output**: Compiles both a detailed Curriculum Vitae (`cv.pdf`) and a concise Resume (`resume.pdf`).
 2. **Modular Architecture**: Source sections (education, experience, skills, etc.) are separated into individual `.tex` files for clean maintenance.
 3. **Automated CI/CD Pipeline**: GitHub Actions compile the documents using a LaTeX container on every commit or push, auto-generating a release with the compiled PDFs.
-4. **Local Development Containerization**: Supports local compilation using Docker and Task/Make, eliminating the need to install a heavy local LaTeX environment.
+4. **Local Development Containerization**: Supports local compilation using Docker and Task, eliminating the need to install a heavy local LaTeX environment.
 5. **Linting and Quality Assurance**: Pre-commit hooks and YAML linting to ensure project file health.
 
 ## Target Audience
