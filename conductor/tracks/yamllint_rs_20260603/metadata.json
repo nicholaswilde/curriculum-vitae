@@ -1,0 +1,8 @@
+{
+  "track_id": "yamllint_rs_20260603",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-03T23:46:00Z",
+  "updated_at": "2026-06-03T23:46:00Z",
+  "description": "Convert repo to use yamllint-rs instead of yamllint"
+}
