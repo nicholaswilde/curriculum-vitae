@@ -4,6 +4,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [~] **Track: Fix the badges in the README.md**
+- [x] **Track: Fix the badges in the README.md**
   *Link: [./tracks/fix_badges_20260603/](./tracks/fix_badges_20260603/)*
 
