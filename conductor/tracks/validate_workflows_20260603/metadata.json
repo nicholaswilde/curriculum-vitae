@@ -1,0 +1,8 @@
+{
+  "track_id": "validate_workflows_20260603",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-03T23:41:00Z",
+  "updated_at": "2026-06-03T23:41:00Z",
+  "description": "Validate compilation and linting workflows for CV and Resume"
+}
