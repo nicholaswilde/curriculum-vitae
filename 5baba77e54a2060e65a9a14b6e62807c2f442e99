@@ -1,0 +1,4 @@
+Task: Update CI workflow to use yamllint-rs
+Summary of changes: Replaced the Python-based yamllint GitHub Action with steps installing yamllint-rs via Cargo and running it.
+Modified files: .github/workflows/lint.yaml
+Why: Standardizes on yamllint-rs for YAML linting in both local and CI environments.
