@@ -1,4 +1,4 @@
-# Track fix_badges_20260603 Context
+# Track modernize_configs_20260603 Context
 
 - [Specification](./spec.md)
 - [Implementation Plan](./plan.md)

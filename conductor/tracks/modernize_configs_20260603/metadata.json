@@ -1,0 +1,8 @@
+{
+  "track_id": "modernize_configs_20260603",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-03T23:54:30Z",
+  "updated_at": "2026-06-03T23:54:30Z",
+  "description": "Modernize GitHub Actions and pre-commit configurations"
+}
