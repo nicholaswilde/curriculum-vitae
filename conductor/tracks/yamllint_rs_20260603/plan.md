@@ -4,10 +4,10 @@ This plan outlines the tasks required to migrate the project's YAML linting tool
 
 ## Phase 1: Migration to yamllint-rs
 
-- [ ] Task: Update Taskfile.yml to use yamllint-rs
-    - [ ] Replace yamllint with yamllint-rs in the lint target
-- [ ] Task: Update pre-commit configuration
-    - [ ] Replace yamllint hook with local yamllint-rs hook in .pre-commit-config.yaml
-- [ ] Task: Update CI workflow to use yamllint-rs
-    - [ ] Update .github/workflows/lint.yaml to install and run yamllint-rs
+- [x] Task: Update Taskfile.yml to use yamllint-rs [05bddb1]
+    - [x] Replace yamllint with yamllint-rs in the lint target
+- [x] Task: Update pre-commit configuration [978e883]
+    - [x] Replace yamllint hook with local yamllint-rs hook in .pre-commit-config.yaml
+- [x] Task: Update CI workflow to use yamllint-rs [5baba77]
+    - [x] Update .github/workflows/lint.yaml to install and run yamllint-rs
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Migration to yamllint-rs' (Protocol in workflow.md)
