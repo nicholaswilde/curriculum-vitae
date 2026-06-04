@@ -42,7 +42,7 @@ tasks:
     cmds:
       - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive lacheck resume.tex
       - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive lacheck cv.tex
-      - yamllint .
+      - yamllint-rs .
   resume:
     desc: Build resume.pdf using the local pdflatex
     cmds:
