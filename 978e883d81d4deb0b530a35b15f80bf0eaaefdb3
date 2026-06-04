@@ -1,0 +1,4 @@
+Task: Update pre-commit configuration
+Summary of changes: Replaced the remote Python-based yamllint hook with a local system-based yamllint-rs hook.
+Modified files: .pre-commit-config.yaml
+Why: Integrates the fast Rust-based linter into the local Git pre-commit workflow hook.
