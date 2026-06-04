@@ -1,0 +1,4 @@
+Task: Update Taskfile.yml to use yamllint-rs
+Summary of changes: Replaced yamllint with yamllint-rs in the Taskfile lint target. Disabled indentation rules in .yamllint due to parser differences in yamllint-rs 0.1.4.
+Modified files: Taskfile.yml, .yamllint
+Why: Speeds up local YAML linting using the Rust-based yamllint-rs tool.
