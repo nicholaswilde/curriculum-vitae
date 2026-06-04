@@ -1,0 +1,4 @@
+Task: Validate LaTeX linting workflow
+Summary of changes: Updated lint task in Taskfile.yml to run lacheck inside the texlive Docker container and fixed the Make-style $(shell id -u) syntax to standard bash $(id -u). Verified that 'task lint' succeeds with zero errors and warnings.
+Modified files: Taskfile.yml
+Why: Standardizes the linting workflow to run inside Docker to eliminate local package dependencies and resolves a shell warning in the Task runner.
