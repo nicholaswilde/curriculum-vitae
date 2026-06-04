@@ -129,3 +129,7 @@ sympy-plots-for-*.tex/
 \#*\#
 .\#*
 *.swp
+
+# Generated typos configuration
+_typos.toml
+

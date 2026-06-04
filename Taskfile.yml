@@ -38,11 +38,26 @@ tasks:
     cmds:
       - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive pdflatex resume.tex
   lint:
-    desc: Lint yaml and tex files
+    desc: Lint yaml, tex, and check spelling
     cmds:
       - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive lacheck resume.tex
       - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive lacheck cv.tex
       - yamllint-rs .
+      - task: spellcheck
+  sort:
+    desc: Sort dictionary.txt
+    cmds:
+      - sort dictionary.txt -u -o dictionary.txt
+  spellcheck:
+    desc: Spellcheck files
+    cmds:
+      - python3 scripts/generate_typos_config.py
+      - typos
+  spellcheck-file:
+    desc: Spellcheck a single file
+    cmds:
+      - python3 scripts/generate_typos_config.py
+      - typos {{shellQuote .FILE}}
   resume:
     desc: Build resume.pdf using the local pdflatex
     cmds:
