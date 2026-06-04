@@ -32,16 +32,16 @@ tasks:
   docker-cv:
     desc: Build cv.pdf using the texlive Docker image
     cmds:
-      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(shell id -u):$(shell id -g) texlive/texlive pdflatex cv.tex
+      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive pdflatex cv.tex
   docker-resume:
     desc: Build resume.pdf using the texlive Docker image
     cmds:
-      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(shell id -u):$(shell id -g) texlive/texlive pdflatex resume.tex
+      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive pdflatex resume.tex
   lint:
     desc: Lint yaml and tex files
     cmds:
-      - lacheck resume.tex
-      - lacheck cv.tex
+      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive lacheck resume.tex
+      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive lacheck cv.tex
       - yamllint .
   resume:
     desc: Build resume.pdf using the local pdflatex
