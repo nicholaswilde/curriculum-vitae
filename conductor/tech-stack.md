@@ -3,6 +3,7 @@
 ## Core
 - **LaTeX**: Document preparation system for high-quality typesetting.
 - **pdfTeX / pdflatex**: Engine used to compile LaTeX source documents (`.tex`) directly into PDF files (`.pdf`).
+- **latexmk**: Automation script used to manage LaTeX compilation passes and resolve document dependencies automatically.
 
 ## Automation & Tools
 - **Task (Taskfile.yml)**: Task runner used for orchestrating build stages, running Docker compilations, and running style tasks.
