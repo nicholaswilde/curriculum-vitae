@@ -16,6 +16,10 @@ tasks:
       - rm -f *.log
       - rm -f *.aux
       - rm -f *.pdf
+  clean-aux:
+    desc: Remove LaTeX auxiliary files while keeping PDFs
+    cmds:
+      - latexmk -c cv.tex resume.tex
   cv:
     desc: Build cv.pdf using the local latexmk
     cmds:
@@ -37,6 +41,10 @@ tasks:
     desc: Build resume.pdf using the texlive Docker image
     cmds:
       - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive latexmk -pdf -interaction=nonstopmode -file-line-error resume.tex
+  docker-clean-aux:
+    desc: Remove LaTeX auxiliary files using the texlive Docker image
+    cmds:
+      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive latexmk -c cv.tex resume.tex
   lint:
     desc: Lint yaml, tex, and check spelling
     cmds:
