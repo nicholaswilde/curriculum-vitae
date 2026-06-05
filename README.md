@@ -7,7 +7,7 @@
 
 My curriculum vitae and resume.
 
-## Requirements
+## :clipboard:&nbsp; Requirements
 
 * [latexmk](https://mg.ael.be/latexmk/)
 or
