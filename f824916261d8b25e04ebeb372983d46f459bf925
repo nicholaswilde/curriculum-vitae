@@ -1,0 +1,4 @@
+Task: Create clean-aux and docker-clean-aux task definitions in Taskfile.yml
+Summary: Added clean-aux and docker-clean-aux targets to Taskfile.yml to remove intermediate compilation artifacts (like .aux, .log, .fls, and .fdb_latexmk) while keeping the compiled PDFs.
+Files: Taskfile.yml
+Why: Provides a way to keep the workspace clean of LaTeX compile leftovers without deleting the built PDFs.
