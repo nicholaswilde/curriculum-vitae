@@ -36,10 +36,12 @@ tasks:
   docker-cv:
     desc: Build cv.pdf using the texlive Docker image
     cmds:
+      # yamllint disable-line rule:line-length
       - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive latexmk -pdf -interaction=nonstopmode -file-line-error cv.tex
   docker-resume:
     desc: Build resume.pdf using the texlive Docker image
     cmds:
+      # yamllint disable-line rule:line-length
       - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive latexmk -pdf -interaction=nonstopmode -file-line-error resume.tex
   docker-clean-aux:
     desc: Remove LaTeX auxiliary files using the texlive Docker image
