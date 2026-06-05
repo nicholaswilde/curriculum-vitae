@@ -4,7 +4,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Upload Compiled PDFs as GitHub Actions Artifacts on Pull Requests**
+- [x] **Track: Upload Compiled PDFs as GitHub Actions Artifacts on Pull Requests**
   *Link: [./tracks/upload_pr_artifacts_20260604/](./tracks/upload_pr_artifacts_20260604/)*
 
 - [ ] **Track: Migrate LaTeX Compilation to latexmk in Taskfile.yml**
