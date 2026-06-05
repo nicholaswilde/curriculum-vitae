@@ -1,0 +1,8 @@
+{
+  "track_id": "upload_pr_artifacts_20260604",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-04T17:42:00Z",
+  "updated_at": "2026-06-04T17:42:00Z",
+  "description": "Upload compiled PDFs as GitHub Actions artifacts on Pull Requests"
+}

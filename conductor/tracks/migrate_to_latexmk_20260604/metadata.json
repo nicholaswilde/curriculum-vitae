@@ -1,0 +1,8 @@
+{
+  "track_id": "migrate_to_latexmk_20260604",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-04T17:42:00Z",
+  "updated_at": "2026-06-04T17:42:00Z",
+  "description": "Migrate LaTeX compilation to latexmk in Taskfile.yml"
+}
