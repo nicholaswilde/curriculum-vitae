@@ -1,0 +1,4 @@
+Task: Update the main title in README.md with briefcase and bust_in_silhouette emojis
+Summary: Changed '# Curriculum Vitae' to '# :briefcase: Curriculum Vitae :bust_in_silhouette:' in README.md.
+Files: README.md
+Why: Directly adds professional themed icons to either side of the title as requested by the user.
