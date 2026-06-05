@@ -17,9 +17,9 @@ tasks:
       - rm -f *.aux
       - rm -f *.pdf
   cv:
-    desc: Build cv.pdf using the local pdflatex
+    desc: Build cv.pdf using the local latexmk
     cmds:
-      - pdflatex cv.tex
+      - latexmk -pdf -interaction=nonstopmode -file-line-error cv.tex
   deps:
     desc: Install some dependencies
     cmds:
@@ -32,11 +32,11 @@ tasks:
   docker-cv:
     desc: Build cv.pdf using the texlive Docker image
     cmds:
-      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive pdflatex cv.tex
+      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive latexmk -pdf -interaction=nonstopmode -file-line-error cv.tex
   docker-resume:
     desc: Build resume.pdf using the texlive Docker image
     cmds:
-      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive pdflatex resume.tex
+      - docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u):$(id -g) texlive/texlive latexmk -pdf -interaction=nonstopmode -file-line-error resume.tex
   lint:
     desc: Lint yaml, tex, and check spelling
     cmds:
@@ -59,9 +59,9 @@ tasks:
       - python3 scripts/generate_typos_config.py
       - typos {{shellQuote .FILE}}
   resume:
-    desc: Build resume.pdf using the local pdflatex
+    desc: Build resume.pdf using the local latexmk
     cmds:
-      - pdflatex resume.tex
+      - latexmk -pdf -interaction=nonstopmode -file-line-error resume.tex
   default:
     cmds:
       - task -l
