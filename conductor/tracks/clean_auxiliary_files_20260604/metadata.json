@@ -1,0 +1,8 @@
+{
+  "track_id": "clean_auxiliary_files_20260604",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-04T17:52:00Z",
+  "updated_at": "2026-06-04T17:52:00Z",
+  "description": "Add clean-aux and docker-clean-aux tasks to remove LaTeX auxiliary files"
+}
