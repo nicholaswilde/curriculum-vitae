@@ -1,0 +1,4 @@
+Task: Update LICENSE to add Nicholas Wilde's copyright details
+Summary: Added 'Copyright (c) 2021-2026 Nicholas Wilde' below the original copyright line in LICENSE.
+Files: LICENSE
+Why: Standard practice to include Nicholas Wilde's copyright for the fork repository.
