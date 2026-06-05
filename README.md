@@ -30,7 +30,7 @@ $ task docker-resume
 $ task docker-cv
 ```
 
-### Cleanup
+### :broom:&nbsp; Cleanup
 
 To clean up intermediate compilation artifacts (like `.aux`, `.log`, etc.) while keeping the compiled `.pdf` files:
 
