@@ -6,5 +6,5 @@ This plan outlines the tasks required to add auxiliary file cleaning.
 - [x] Task: Create clean-aux and docker-clean-aux task definitions in Taskfile.yml [f824916]
 - [x] Task: Compile PDFs and run local `task clean-aux` to verify auxiliary files are removed and PDFs remain [f824916]
 - [x] Task: Compile PDFs and run Docker `task docker-clean-aux` to verify auxiliary files are removed and PDFs remain [f824916]
-- [~] Task: Verify that `task lint` runs successfully
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Implement and Verify Auxiliary Cleanup Tasks' (Protocol in workflow.md)
+- [x] Task: Verify that `task lint` runs successfully [9c9cf07]
+- [~] Task: Conductor - User Manual Verification 'Phase 1: Implement and Verify Auxiliary Cleanup Tasks' (Protocol in workflow.md)
