@@ -1,0 +1,6 @@
+Verification Report: Phase 1: Update README.md and LICENSE
+Automated tests command: task lint
+Manual verification steps:
+1. Open README.md and verify Requirements now references latexmk and includes the Cleanup section.
+2. Open LICENSE and verify Nicholas Wilde's copyright (2021-2026) is added.
+User confirmation: Approved explicitly by the user responding 'yes'.
