@@ -4,3 +4,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
+- [ ] **Track: Add Emojis to README.md Headings**
+  *Link: [./tracks/add_readme_emojis_20260604/](./tracks/add_readme_emojis_20260604/)*
+
+
