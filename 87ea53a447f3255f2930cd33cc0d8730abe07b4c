@@ -1,0 +1,4 @@
+Task: Add broom emoji to Cleanup subheading in README.md
+Summary: Changed '### Cleanup' to '### :broom:&nbsp; Cleanup' in README.md.
+Files: README.md
+Why: Enhances visual design consistency across README subheadings.
