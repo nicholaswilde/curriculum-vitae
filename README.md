@@ -9,7 +9,7 @@ My curriculum vitae and resume.
 
 ## Requirements
 
-* [pdflatex](https://tex.stackexchange.com/q/1092)
+* [latexmk](https://mg.ael.be/latexmk/)
 or
 * [Docker](https://www.docker.com/)
 
@@ -21,13 +21,29 @@ or
 4. Push the updated `*.tex` files to the repo.
 5. The [ci github action](https://github.com/nicholaswilde/curriculum-vitae/actions/workflows/ci.yaml) will build and create a release from which the PDFs can downloaded.
 
-Docker may also be used to build the PDFs instead of install `pdflatex`.
+Docker may also be used to build the PDFs instead of installing `latexmk`.
 
 ```shell
 $ task docker
 # or
 $ task docker-resume
 $ task docker-cv
+```
+
+### Cleanup
+
+To clean up intermediate compilation artifacts (like `.aux`, `.log`, etc.) while keeping the compiled `.pdf` files:
+
+```shell
+$ task clean-aux
+# or using Docker
+$ task docker-clean-aux
+```
+
+To clean up everything (including `.pdf` files):
+
+```shell
+$ task clean
 ```
 
 ## :floppy_disk:&nbsp; Download the Latest PDFs
