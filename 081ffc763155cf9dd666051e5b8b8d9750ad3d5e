@@ -1,0 +1,4 @@
+Task: Update README.md requirements, usage description, and document cleanup targets
+Summary: Swapped pdflatex for latexmk in Requirements and Usage, and added a Cleanup section outlining task clean-aux, task docker-clean-aux, and task clean.
+Files: README.md
+Why: Reflects the actual project requirements and new targets added to Taskfile.yml.
