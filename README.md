@@ -1,4 +1,4 @@
-# Curriculum Vitae
+# :briefcase: Curriculum Vitae :bust_in_silhouette:
 
 [![ci](https://img.shields.io/github/actions/workflow/status/nicholaswilde/curriculum-vitae/ci.yaml?label=ci&logo=github&style=for-the-badge)](https://github.com/nicholaswilde/curriculum-vitae/actions/workflows/ci.yaml)
 [![lint](https://img.shields.io/github/actions/workflow/status/nicholaswilde/curriculum-vitae/lint.yaml?label=lint&logo=github&style=for-the-badge)](https://github.com/nicholaswilde/curriculum-vitae/actions/workflows/lint.yaml)
