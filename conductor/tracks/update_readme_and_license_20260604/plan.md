@@ -4,6 +4,6 @@ This plan outlines the tasks required to update documentation and license inform
 
 ## Phase 1: Update README.md and LICENSE
 - [x] Task: Update LICENSE to add Nicholas Wilde's copyright details [c7cb87a]
-- [~] Task: Update README.md requirements, usage description, and document cleanup targets
-- [ ] Task: Verify that `task lint` runs successfully
+- [x] Task: Update README.md requirements, usage description, and document cleanup targets [081ffc7]
+- [~] Task: Verify that `task lint` runs successfully
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Update README.md and LICENSE' (Protocol in workflow.md)
